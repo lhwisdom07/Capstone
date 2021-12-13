@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#div2 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#div3 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+function allowDrop2(ev) {
+  ev.preventDefault2();
+}
+
+function drag2(ev) {
+  ev.dataTransfer.setData2("text", ev.target.id);
+}
+
+function drop2(ev) {
+  ev.preventDefault2();
+  var data = ev.dataTransfer.getData2("text");
+  ev.target.appendChild2(document.getElementById(data));
+}
+function allowDrop3(ev) {
+  ev.preventDefault3();
+}
+
+function drag3(ev) {
+  ev.dataTransfer.setData3("text", ev.target.id);
+}
+
+function drop3(ev) {
+  ev.preventDefault3();
+  var data = ev.dataTransfer.getData3("text");
+  ev.target.appendChild3(document.getElementById(data));
+}
+</script>
+</head>
+<body style="background-color:powderblue;">
+
+<p>Which cabinet do you use that your director check daily?</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  Director's Mail
+</div>
+<br>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  Lawsuit file
+</div>
+<br>
+<img id="drag1" src="document1.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+<p>Which filing cabinet would you use  to place documents that cannot be faxed?</p>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+  Non-faxing documents
+</div>
+<br>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+Notarized Documents
+</div>
+<br>
+<img id="drag2" src="document2.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+<p>You would place the document in which cabinet if it has a social security number on it?</p>
+
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+  Flyers
+</div>
+<br>
+
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+  Confidential Files
+</div>
+<br>
+<img id="drag3" src="file 2.jpeg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+</body>
+</html>
